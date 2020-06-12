@@ -4,16 +4,11 @@ Returns: a List of integers
 '''
 def sliding_window_max(nums, k):
     # Your code here
-    max_sum = 0
-    for i in range(k):
-        # print(i)
-        max_sum += nums[i]
-        print(max_sum, 'max sum')
-    
-        # for start in range(1, i - k):
-        #     print(start)
-
-
+    result = []
+    for i in range(len(nums) - k + 1):
+        result.append(max(nums[i:i + k]))
+        
+    return result
 arr = [1, 3, -1, -3, 5, 3, 6, 7]
 k = 3
 
