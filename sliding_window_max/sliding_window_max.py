@@ -4,9 +4,15 @@ Returns: a List of integers
 '''
 def sliding_window_max(nums, k):
     # Your code here
+    result = []
+    for i in range(len(nums) - k + 1):
+        result.append(max(nums[i:i + k]))
+        
+    return result
+arr = [1, 3, -1, -3, 5, 3, 6, 7]
+k = 3
 
-    pass
-
+print(sliding_window_max(arr, k))
 
 if __name__ == '__main__':
     # Use the main function here to test out your implementation 
